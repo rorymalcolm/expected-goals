@@ -5,7 +5,7 @@
 # and then iterate through them
 for dir in $(find . -maxdepth 1 -type d)
 do
-  # we don't want to run wrangler deploy on the root directory or the scripts directory or .git
+  # we don't want to run wrangler deploy on the root directory, the scripts directory or .git
   if [ "$dir" != "." ] && [ "$dir" != "./scripts" ]  && [ "$dir" != "./.git" ]
   then
     # we want to cd into the directory and run wrangler deploy
