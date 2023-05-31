@@ -6,9 +6,7 @@ export default {
     if (url.pathname.includes('favicon')) {
       return new Response(null, { status: 404 });
     }
-    const resultsPromise = env.MATCH_STATS_DB.prepare('SELECT DISTINCT * FROM matches;').all<MatchForDb>();
-    ctx.waitUntil(resultsPromise);
-    const results = await resultsPromise;
+    const results = await env.MATCH_STATS_DB.prepare('SELECT DISTINCT * FROM matches;').all<MatchForDb>();
     console.log(results);
     if (results.results === undefined || results.results.length === 0) {
       return new Response('No results found');
