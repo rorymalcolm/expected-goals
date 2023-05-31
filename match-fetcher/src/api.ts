@@ -1,3 +1,5 @@
+import { Match } from './types';
+
 const BASE_API_URL = 'https://www.fotmob.com/api';
 const LEAGUE_API_URL = `${BASE_API_URL}/leagues`;
 

@@ -1,4 +1,4 @@
-type Match = {
+export type Match = {
   round: number;
   roundName: string;
   pageUrl: string;
@@ -26,4 +26,14 @@ type Match = {
       longKey: string;
     };
   };
+};
+
+export type MatchNotification = {
+  id: string;
+  home: string;
+  away: string;
+  matchTime: string;
+  score: string | undefined;
+  homeScore: number;
+  awayScore: number;
 };

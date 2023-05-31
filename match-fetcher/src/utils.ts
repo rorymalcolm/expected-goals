@@ -1,3 +1,5 @@
+import { Match } from './types';
+
 export function filterAndTransformMatches(matches: Match[]) {
   return matches
     .filter((match) => match.status.finished)
