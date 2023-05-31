@@ -49,3 +49,5 @@ database_id = "9d670caa-3af1-49b9-9b0d-91fe4b1cc21c"
 # [env.shared]
 # SHARED_VARIABLE = "shared_value"
 
+[triggers]
+crons = ["0 9 * * 1,5"]
